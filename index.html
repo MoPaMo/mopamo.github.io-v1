@@ -10,29 +10,47 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <nav class="navbar  navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="/img/Avatar.jpg" alt="" class="rounded-full" width="40" height="40">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>
@@ -49,7 +67,7 @@
               <rect transform="rotate(45)" x="49.091" y="12.281" width="70.19" height="9.0437" rx="6.5558" ry="4.5218" />
             </g>
           </svg>
-          <svg  class="h-4 stroke-current fill-current text-grey-600 cursor-pointer"  version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <svg class="h-4 stroke-current fill-current text-grey-600 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <g>
               <rect transform="matrix(-.6777 -.73534 -.6777 .73534 0 0)" x="-88.95" y="-21.238" width="68.546" height="9.3269" rx="5.3856" ry="4.6634" />
               <rect transform="matrix(-.6777 .73534 .6777 .73534 0 0)" x="-21.238" y="80.253" width="67.496" height="8.6965" rx="6.3041" ry="4.3482" />
@@ -67,6 +85,7 @@
   </nav>
   <script src="/js/vue.js" charset="utf-8"></script>
   <script src="/js/vue-router.js" charset="utf-8"></script>
+  <script src="/js/bootstrap.bundle.min.js" charset="utf-8"></script>
   <script src="/js/script.js" charset="utf-8"></script>
 </body>
 
