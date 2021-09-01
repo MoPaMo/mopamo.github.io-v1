@@ -1,17 +1,73 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/css/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <!-- ... -->
 </head>
-<body>
-  <!-- ... -->
 
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/img/Avatar.jpg" alt="" class="rounded-full" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="bg-dark">
+
+  </main>
+  <nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <div class="container flex text-light text-center">
+      <div class="flex-none">
+        <div class="flex">
+          <svg class="h-4 stroke-current fill-current text-blue-500 hover:text-blue-900 duration-100 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <rect transform="rotate(-45)" x="-21.325" y="49.091" width="71.283" height="9.6993" rx="5.6006" ry="4.8496" />
+              <rect transform="rotate(45)" x="49.091" y="12.281" width="70.19" height="9.0437" rx="6.5558" ry="4.5218" />
+            </g>
+          </svg>
+          <svg  class="h-4 stroke-current fill-current text-grey-600 cursor-pointer"  version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <rect transform="matrix(-.6777 -.73534 -.6777 .73534 0 0)" x="-88.95" y="-21.238" width="68.546" height="9.3269" rx="5.3856" ry="4.6634" />
+              <rect transform="matrix(-.6777 .73534 .6777 .73534 0 0)" x="-21.238" y="80.253" width="67.496" height="8.6965" rx="6.3041" ry="4.3482" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="">
+        <!--Space between icons-->
+      </div>
+      <div class="">
+        3
+      </div>
+    </div>
+  </nav>
   <script src="/js/vue.js" charset="utf-8"></script>
   <script src="/js/vue-router.js" charset="utf-8"></script>
   <script src="/js/script.js" charset="utf-8"></script>
 </body>
+
 </html>
