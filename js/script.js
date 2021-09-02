@@ -38,6 +38,11 @@ const routes = [{
     component: {
       template: '<div>{{$route.params.name}}</div>'
     }
+  },{
+    path: '/acknowledgements',
+    component: {
+      template: '<article><h1>Acknowledgements</h1><h3>These awesome open source projects made this site possible:<h3></article>'
+    }
   },
   {
     path: '*',
