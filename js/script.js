@@ -1,7 +1,7 @@
 const routes = [{
     path: '/',
     component: {
-      template: `<div><div v-for="r in rows" class="card text-white bg-dark mb-3"><div class="card-header"><img :src="r.img" class="w-5 h-5 rounded-full">{{r.username}}</div><div class="card-body" v-html="r.text"></div></div></div>`,
+      template: `<div><div v-for="r in rows" class="card mb-3"><div class="card-header"><img :src="r.img" class="w-5 h-5 rounded-full">{{r.username}}</div><div class="card-body" v-html="r.text"></div></div></div>`,
       data() {
         return {
           rows: [{
