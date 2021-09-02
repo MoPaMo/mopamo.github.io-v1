@@ -5,14 +5,27 @@ const routes = [{
       data() {
         return {
           rows: [{
-            img:"/img/avatar.jpg",
-            username: "Hobby",
-            text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
-          }, {
-            img:"/img/avatar.jpg",
-            username: "Hobby",
-            text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
-          }]
+              img: "/img/avatar.jpg",
+              username: "Hobby",
+              text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
+            }, {
+              img: "/img/avatar.jpg",
+              username: "Hobby",
+              text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
+            },
+            {
+              img: "/img/avatar.jpg",
+              username: "Quotable",
+              text: `<figure>
+  <blockquote class="blockquote">
+    <p>Huh, Yeah! What is it good for?</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+  Edwin Starr, <cite title="War">War</cite>
+  </figcaption>
+</figure>`
+            },
+          ]
         }
       }
     }
