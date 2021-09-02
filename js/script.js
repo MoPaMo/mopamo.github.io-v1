@@ -1,20 +1,23 @@
 const routes = [{
     path: '/',
     component: {
-      template: `<div><div v-for="r in rows" class="card mb-3"><div class="card-header"><img :src="r.img" class="w-5 h-5 rounded-full">{{r.username}}</div><div class="card-body" v-html="r.text"></div></div></div>`,
+      template: `<div><div v-for="r in rows" class="card mb-3"><div class="card-header"><img :src="r.img" :class="'w-5 h-5 '+(r.round ? 'rounded-full':'')">{{r.username}}</div><div class="card-body" v-html="r.text"></div></div></div>`,
       data() {
         return {
           rows: [{
               img: "/img/avatar.jpg",
+              round:true,
               username: "Hobby",
               text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
             }, {
               img: "/img/avatar.jpg",
+              round:true,
               username: "Hobby",
               text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
             },
             {
-              img: "/img/avatar.jpg",
+              img: "/img/quotable.svg",
+              round:false,
               username: "Quotable",
               text: `<figure>
   <blockquote class="blockquote">
@@ -31,9 +34,9 @@ const routes = [{
     }
   },
   {
-    path: '/bar',
+    path: '/project/:name',
     component: {
-      template: '<div>bar</div>'
+      template: '<div>{{$route.params.name}}</div>'
     }
   },
   {
