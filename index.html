@@ -9,86 +9,91 @@
   <!-- ... -->
 </head>
 
-<body>
-
-  <nav class="navbar  navbar-dark bg-dark fixed-top shadow ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="/img/Avatar.jpg" alt="" class="rounded-full" width="40" height="40">
-      </a>
-      <!--button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+<body class="bg-dark text-light">
+  <div id="app">
+    <nav class="navbar  navbar-dark bg-dark fixed-top shadow ">
+      <div class="container-fluid">
+        <router-link to="/" class="navbar-brand" href="#">
+          <img src="/img/Avatar.jpg" alt="" class="rounded-full" width="40" height="40">
+        </router-link>
+        <!--button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button-->
-      <svg aria-hidden="true" class="h-6 text-grey-50" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" focusable="true" data-prefix="fas" data-icon="pizza-slice" class="svg-inline--fa fa-pizza-slice fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path
-          fill="#fff"
-          d="M158.87.15c-16.16-1.52-31.2 8.42-35.33 24.12l-14.81 56.27c187.62 5.49 314.54 130.61 322.48 317l56.94-15.78c15.72-4.36 25.49-19.68 23.62-35.9C490.89 165.08 340.78 17.32 158.87.15zm-58.47 112L.55 491.64a16.21 16.21 0 0 0 20 19.75l379-105.1c-4.27-174.89-123.08-292.14-299.15-294.1zM128 416a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm48-152a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm104 104a32 32 0 1 1 32-32 32 32 0 0 1-32 32z"></path>
-      </svg>
+        <svg aria-hidden="true" class="h-6 text-grey-50" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" focusable="true" data-prefix="fas" data-icon="pizza-slice"
+          class="svg-inline--fa fa-pizza-slice fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="#fff"
+            d="M158.87.15c-16.16-1.52-31.2 8.42-35.33 24.12l-14.81 56.27c187.62 5.49 314.54 130.61 322.48 317l56.94-15.78c15.72-4.36 25.49-19.68 23.62-35.9C490.89 165.08 340.78 17.32 158.87.15zm-58.47 112L.55 491.64a16.21 16.21 0 0 0 20 19.75l379-105.1c-4.27-174.89-123.08-292.14-299.15-294.1zM128 416a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm48-152a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm104 104a32 32 0 1 1 32-32 32 32 0 0 1-32 32z">
+          </path>
+        </svg>
 
-      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header  text-light">
-          <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">MoPaMo</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header  text-light">
+              <router-link to="/">
+            <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">MoPaMo</h5>
+            </router-link><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <main class="bg-dark h-screen">
+    </nav>
 
-  </main>
-  <nav class="navbar fixed-bottom navbar-dark bg-dark shadow " style="background-color:#291E3A !important">
-    <div class="container flex text-light text-center">
-      <div class="flex-none">
-        <div class="flex">
-          <svg class="h-4 stroke-current fill-current text-blue-500 hover:text-blue-900 duration-100 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <rect transform="rotate(-45)" x="-21.325" y="49.091" width="71.283" height="9.6993" rx="5.6006" ry="4.8496" />
-              <rect transform="rotate(45)" x="49.091" y="12.281" width="70.19" height="9.0437" rx="6.5558" ry="4.5218" />
-            </g>
-          </svg>
-          <svg class="h-4 stroke-current fill-current text-grey-600 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <rect transform="matrix(-.6777 -.73534 -.6777 .73534 0 0)" x="-88.95" y="-21.238" width="68.546" height="9.3269" rx="5.3856" ry="4.6634" />
-              <rect transform="matrix(-.6777 .73534 .6777 .73534 0 0)" x="-21.238" y="80.253" width="67.496" height="8.6965" rx="6.3041" ry="4.3482" />
-            </g>
-          </svg>
+    <main class="container">
+      <br><br><br>
+      <router-view></router-view>
+    </main>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark shadow " style="background-color:#291E3A !important">
+      <div class="container flex text-light text-center">
+        <div class="flex-none">
+          <div class="flex">
+            <svg class="h-4 stroke-current fill-current text-blue-500 hover:text-blue-900 duration-100 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect transform="rotate(-45)" x="-21.325" y="49.091" width="71.283" height="9.6993" rx="5.6006" ry="4.8496" />
+                <rect transform="rotate(45)" x="49.091" y="12.281" width="70.19" height="9.0437" rx="6.5558" ry="4.5218" />
+              </g>
+            </svg>
+            <svg class="h-4 stroke-current fill-current text-grey-600 cursor-pointer" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect transform="matrix(-.6777 -.73534 -.6777 .73534 0 0)" x="-88.95" y="-21.238" width="68.546" height="9.3269" rx="5.3856" ry="4.6634" />
+                <rect transform="matrix(-.6777 .73534 .6777 .73534 0 0)" x="-21.238" y="80.253" width="67.496" height="8.6965" rx="6.3041" ry="4.3482" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="">
+          <!--Space between icons-->
+        </div>
+        <div class="">
+          3
         </div>
       </div>
-      <div class="">
-        <!--Space between icons-->
-      </div>
-      <div class="">
-        3
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <script src="/js/vue.js" charset="utf-8"></script>
   <script src="/js/vue-router.js" charset="utf-8"></script>
   <script src="/js/bootstrap.bundle.min.js" charset="utf-8"></script>
