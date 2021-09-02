@@ -54,6 +54,7 @@ const router = new VueRouter({
 const app = new Vue({
   router: router,
   data: {
+    loading:false,
     rows: [{
       username: "Hobby",
       text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"

@@ -11,6 +11,9 @@
 
 <body class="bg-light">
   <div id="app">
+    <div v-if="loading" class="h-screen w-screen bg-green">
+      LOADING...
+    </div>
     <nav class="navbar  navbar-light bg-light fixed-top shadow ">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand" href="#">
