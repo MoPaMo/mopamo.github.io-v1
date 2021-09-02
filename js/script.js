@@ -1,3 +1,4 @@
+//Copyright (c) 2021 MoPaMo All Rights Reserved.
 const routes = [{
     path: '/',
     component: {
@@ -41,7 +42,7 @@ const routes = [{
   },{
     path: '/acknowledgements',
     component: {
-      template: '<article><h1>Acknowledgements</h1><h3>These awesome open source projects made this site possible:<h3></article>'
+      template: '<article><h1>Acknowledgements</h1><h5>These awesome open source projects made this site possible:</h5><ul><li>Bootstrap</li></ul></article>'
     }
   },
   {

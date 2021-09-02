@@ -1,2 +1,1 @@
-Copyright © MoPaMo 2021
-All rights reserved
+Copyright (c) 2021 MoPaMo All Rights Reserved.
