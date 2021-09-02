@@ -47,21 +47,21 @@ const routes = [{
         return {
           licenses: [{
             name: "Bootstrap",
-            text: `The MIT License (MIT)
-
-  Copyright (c) 2011-2021 Twitter, Inc.
-  Copyright (c) 2011-2021 The Bootstrap Authors
-
+            text: `The MIT License (MIT)<br/>
+<br/>
+  Copyright (c) 2011-2021 Twitter, Inc.<br/>
+  Copyright (c) 2011-2021 The Bootstrap Authors<br/>
+<br/>
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
-
+<br/>
   The above copyright notice and this permission notice shall be included in
   all copies or substantial portions of the Software.
-
+<br/>
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -69,20 +69,105 @@ const routes = [{
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.`
-},{name:"Vue", text:"A license"}]
+          }, {
+            name: "Vue",
+            text: `The MIT License (MIT)
+
+Copyright (c) 2013-present, Yuxi (Evan) You<br/>
+<br/>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+<br/>
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+<br/>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.`
+          }, {
+            name: "Vue Router",
+            text: `MIT License
+<br/><br/>
+Copyright (c) 2013-present Evan You
+<br/><br/>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+<br/><br/>
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+<br/><br/>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`
+}, {name:"Tailwind CSS", text:`MIT License
+<br/><br/>
+Copyright (c) Adam Wathan <adam.wathan@gmail.com><br/>
+Copyright (c) Jonathan Reinink <jonathan@reinink.ca>
+<br/><br/>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+<br/><br/>
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+<br/><br/>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`},{
+            name: "Bootstrap Icon",
+            text: `The MIT License (MIT)
+<br/><br/>
+Copyright (c) 2019-2020 The Bootstrap Authors
+<br/>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+<br/><br/>
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+<br/><br/>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+          }, {
+            name: "FontAwesome Icons",
+            text: `CC BY 4.0 License (<a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>)
+In the Font Awesome Free download, the CC BY 4.0 license applies to all icons
+packaged as SVG and JS file types.
+<br/>
+<br/>
+Indication: Changes were made to the icons`
+          }]
         }
       },
       template: `<article><h1>Acknowledgements</h1><h5>These awesome open source projects made this site possible:</h5>
-      <div class="accordion" id="accordion">
+      <div class="accordion" id="accordionParent">
         <div class="accordion-item"  v-for="item,i in licenses">
           <h2 class="accordion-header" :id="'heading'+i">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+i" aria-expanded="false" aria-controls="collapseOne">
               {{item.name}}
             </button>
           </h2>
-          <div :id="'collapse'+i" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-            <div class="accordion-body">
-              {{item.text}}
+          <div :id="'collapse'+i" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionParent">
+            <div class="accordion-body" v-html="item.text">
             </div>
           </div>
         </div>
