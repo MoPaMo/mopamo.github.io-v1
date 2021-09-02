@@ -115,7 +115,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
-}, {name:"Tailwind CSS", text:`MIT License
+          }, {
+            name: "Tailwind CSS",
+            text: `MIT License
 <br/><br/>
 Copyright (c) Adam Wathan <adam.wathan@gmail.com><br/>
 Copyright (c) Jonathan Reinink <jonathan@reinink.ca>
@@ -136,7 +138,8 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.`},{
+SOFTWARE.`
+          }, {
             name: "Bootstrap Icon",
             text: `The MIT License (MIT)
 <br/><br/>
@@ -191,6 +194,11 @@ const router = new VueRouter({
 
 const app = new Vue({
   router: router,
+  methods:{
+    back(){
+      router.go(-1)
+    }
+  },
   data: {
     loading: false,
     rows: [{
