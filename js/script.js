@@ -5,7 +5,7 @@ const routes = [{
       data() {
         return {
           rows: [{
-            img:"/img/avatar.JPG",
+            img:"/img/avatar.jpg",
             username: "Hobby",
             text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
           }, {
