@@ -5,31 +5,7 @@ const routes = [{
       template: `<div><div v-for="r in rows" class="card mb-3"><div class="card-header"><img :src="r.img" :class="'w-5 h-5 '+(r.round ? 'rounded-full':'')">{{r.username}}</div><div class="card-body" v-html="r.text"></div></div></div>`,
       data() {
         return {
-          rows: [{
-              img: "/img/avatar.jpg",
-              round: true,
-              username: "Hobby",
-              text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
-            }, {
-              img: "/img/avatar.jpg",
-              round: true,
-              username: "Hobby",
-              text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
-            },
-            {
-              img: "/img/quotable.svg",
-              round: false,
-              username: "Quotable",
-              text: `<figure>
-  <blockquote class="blockquote">
-    <p>Huh, Yeah! What is it good for?</p>
-  </blockquote>
-  <figcaption class="blockquote-footer">
-  Edwin Starr, <cite title="War">War</cite>
-  </figcaption>
-</figure>`
-            },
-          ]
+          rows: allrows
         }
       }
     }
@@ -194,8 +170,8 @@ const router = new VueRouter({
 
 const app = new Vue({
   router: router,
-  methods:{
-    back(){
+  methods: {
+    back() {
       router.go(-1)
     }
   },
