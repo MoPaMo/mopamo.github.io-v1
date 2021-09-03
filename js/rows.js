@@ -5,14 +5,14 @@ let allrows=[
     username: "Hobby",
     text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
   }, {
-    img: "/img/avatar.jpg",
+    img: "/img/hobbys.png",
     round: true,
     username: "Hobby",
     text: "I like drawing! Check out my newest drawings on behance: <a href=\"https://mpm.is-a.dev/be\">https://mpm.is-a.dev/be</a>"
   },
   {
-    img: "/img/quotable.svg",
-    round: false,
+    img: "/img/quote.png",
+    round: true,
     username: "Quotable",
     text: `<figure>
 <blockquote class="blockquote">
